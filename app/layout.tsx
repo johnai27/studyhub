@@ -13,6 +13,20 @@ export const metadata: Metadata = {
   title: "StudyHub - Gestor de Estudiantes",
   description: "Plataforma moderna para gestionar tu vida académica",
   generator: "v0.app",
+  // === CONFIGURACIÓN PWA ===
+  manifest: "/manifest.json",
+  themeColor: "#000000",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "StudyHub",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  // ========================
   icons: {
     icon: [
       {
@@ -39,6 +53,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        {/* === CONFIGURACIÓN PWA EN HEAD === */}
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <meta name="theme-color" content="#000000" />
+        {/* ================================== */}
+      </head>
       <body className={`font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <SidebarProvider>{children}</SidebarProvider>

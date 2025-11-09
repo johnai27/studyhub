@@ -10,7 +10,7 @@ export default function HabitosPage() {
       <AppSidebar />
       <SidebarInset>
         <AppHeader />
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 animate-slide-in-bottom">
           <div className="mx-auto max-w-7xl space-y-6">
             <div>
               <h1 className="text-3xl font-bold tracking-tight">Hábitos</h1>

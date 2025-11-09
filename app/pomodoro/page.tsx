@@ -10,7 +10,7 @@ export default function PomodoroPage() {
       <AppSidebar />
       <SidebarInset>
         <AppHeader />
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 animate-slide-in-bottom">
           <div className="mx-auto max-w-4xl space-y-6">
             <div>
               <h1 className="text-3xl font-bold tracking-tight">Pomodoro</h1>
